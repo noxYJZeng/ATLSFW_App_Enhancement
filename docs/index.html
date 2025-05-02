@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATLSFW App – Sustainable Fashion for Atlanta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #101820;
+      color: #fff;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .section {
+      padding: 4rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      font-size: 1.1rem;
+    }
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.5rem;
+      scroll-snap-type: x mandatory;
+      padding: 1rem 0;
+      scrollbar-width: none;
+    }
+    .scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+    .scroll-item {
+      flex: 0 0 300px;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      scroll-snap-align: start;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 360px;
+    }
+    .scroll-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #f26b38;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #101820;
+      color: #fff;
+    }
+
+    /* Intro Banner with Background */
+	.intro-banner {
+		position: relative;
+		background: url('images/banner.jpg') center/cover no-repeat;
+		padding: 8rem 1rem 6rem;
+		text-align: center;
+		color: #fff;
+		overflow: hidden;
+		}
+		.intro-banner::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 0;
+		}
+		.intro-inner {
+		position: relative;
+		z-index: 1;
+		animation: fadeIn 2s ease-out both;
+		}
+		.intro-inner h2 {
+		font-size: 3rem;
+		font-weight: 700;
+		animation: slideDown 1.2s ease-out;
+		}
+		.intro-inner .divider {
+		width: 600px;
+		height: 2px;
+		background-color: #fff;
+		margin: 1rem auto;
+		border-radius: 1px;
+		animation: fadeIn 2s ease-in-out 1s both;
+		}
+		.intro-inner p {
+		font-size: 1.3rem;
+		margin-top: 1rem;
+		animation: slideUp 1.4s ease-out;
+		}
+		@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+		}
+		@keyframes slideDown {
+		0% { opacity: 0; transform: translateY(-30px); }
+		100% { opacity: 1; transform: translateY(0); }
+		}
+		@keyframes slideUp {
+		0% { opacity: 0; transform: translateY(30px); }
+		100% { opacity: 1; transform: translateY(0); }
+		}
+
+  </style>
+</head>
+<body class="landing" onload="window.scrollTo(0, 0);">
+  <header>
+    <h1 style="display: flex; align-items: center; gap: 0.75rem; padding-left: 1rem;">
+      <img src="images/logo.png" alt="ATLSFW Logo" style="height: 48px;">
+      <span style="font-size: 1.5rem; color: white;">ATLSFW App</span>
+    </h1>
+    <nav style="padding-right: 1rem;">
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#demo">Demo</a>
+      <a href="#atlsfw">ATLSFW</a>
+    </nav>
+  </header>
+
+  <!-- Intro Banner -->
+  <section id="intro" class="intro-banner">
+	<div class="intro-inner">
+	  <h2>Welcome to the ATLSFW App</h2>
+	  <div class="divider"></div>
+	  <p>Empowering Atlanta's Sustainable Fashion Community</p>
+	</div>
+  </section>
+  
+
+  <section id="about" class="section">
+    <h2>About ATLSFW</h2>
+    <p>
+      ATLSFW App is a digital platform dedicated to uniting Atlanta’s sustainable fashion ecosystem. We make it easier for users to explore eco-conscious brands, attend impactful events, and stay informed on the latest trends and news.
+    </p>
+    <p>
+      The fashion industry produces 10% of global carbon emissions. In Atlanta, sustainable fashion is fragmented and inaccessible. The ATLSFW App brings together events, news, and ethical vendors into a single platform to empower eco-conscious choices.
+    </p>
+	
+  </section>
+
+  <section id="features" class="section">
+	<h2>Key Features</h2>
+	<style>
+	  .scroll-container {
+		display: flex;
+		overflow-x: auto;
+		gap: 1.5rem;
+		scroll-snap-type: x mandatory;
+		padding: 1rem 0;
+		scrollbar-width: none;
+	  }
+	  .scroll-container::-webkit-scrollbar {
+		display: none;
+	  }
+	  .scroll-item {
+		flex: 0 0 300px;
+		background: #fff;
+		padding: 1.25rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+		scroll-snap-align: start;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		min-height: 360px;
+	  }
+	  .scroll-item:hover {
+		transform: scale(1.03);
+		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+	  }
+	  .scroll-item h3 {
+		font-size: 1.2rem;
+		margin-bottom: 0.25rem;
+	  }
+	  .scroll-item p {
+		margin-top: 0;
+		line-height: 1.4;
+	  }
+	</style>
+  
+	<div class="scroll-container">
+	  <div class="scroll-item">
+		<h3>Upcoming Events</h3>
+		<p>Discover a curated list of upcoming sustainable fashion events in Atlanta, including fashion shows, panel discussions, pop-up shops, and more. Each event listing provides detailed information such as time, location, organizers, and descriptions, along with a one-click RSVP function to mark your interest.</p>
+	  </div>
+  
+	  <div class="scroll-item">
+		<h3>Workshops & Repair Cafés</h3>
+		<p>Participate in community-driven hands-on experiences such as clothing repair cafés, textile reuse tutorials, and sustainable material workshops. Events are filterable by type and include dedicated styling and visual cues that differentiate them from other listings.</p>
+	  </div>
+  
+	  <div class="scroll-item">
+		<h3>Featured Brands</h3>
+		<p>Browse a selection of vetted sustainable fashion brands operating locally or nationally. Each brand profile includes a description of their eco-friendly practices, product highlights, and a direct link to their website or store within the app.</p>
+	  </div>
+  
+	  <div class="scroll-item">
+		<h3>Ticket Information</h3>
+		<p>Secure your spot at high-demand events through an integrated ticketing section. Listings provide clear calls-to-action, direct external links to ticket platforms, and real-time updates on availability, pricing tiers, and deadlines.</p>
+	  </div>
+  
+	  <div class="scroll-item">
+		<h3>Personalized Home Page</h3>
+		<p>Each user's home screen is dynamically tailored with content such as saved events, relevant articles, and recommended brands. Built-in pull-to-refresh, contextual loading indicators, and error messages ensure a responsive and intuitive experience.</p>
+	  </div>
+  
+	  <div class="scroll-item">
+		<h3>Admin Event Management</h3>
+		<p>Admin users have access to a full suite of content moderation tools, including editing and deleting events, confirming vendors, managing user-generated content, and handling tickets or approvals directly from their admin dashboard.</p>
+	  </div>
+	</div>
+  </section>
+  
+
+  <section id="demo" class="section">
+	<h2>App Demo</h2>
+	<p style="margin-bottom: 2rem;">
+		The ATLSFW App supports three distinct types of users—regular users, vendors, and admins—each with tailored features and responsibilities. 
+		<strong>Users</strong> can browse sustainable fashion events, save favorite articles, and personalize their dashboard. 
+		<strong>Vendors</strong> can manage their brand presence, update shop information, and interact with community content. 
+		<strong>Admins</strong> oversee the entire ecosystem, from approving vendors and moderating posts to organizing events and maintaining platform quality.
+	  </p>
+	  
+  
+	<!-- User Account -->
+	<div style="margin-bottom: 3rem;">
+	  <h3>User Account Demo</h3>
+	  <p>See how a regular user browses events, saves articles, and connects with sustainable fashion content.</p>
+	  <iframe src="https://youtube.com/embed/6ybgmBqASd4?si=nm0yuSZxMcjhBdDo" allowfullscreen></iframe>
+	</div>
+  
+	<!-- Admin Account -->
+	<div style="margin-bottom: 3rem;">
+	  <h3>Admin Account Demo</h3>
+	  <p>Watch how an administrator manages events, reviews vendors, and updates platform content.</p>
+	  <iframe src="https://www.youtube.com/embed/HvMTKXKlpOo?si=aBriBezy1FHURPjC" allowfullscreen></iframe>
+	</div>
+  
+	<!-- Vendor Account -->
+	<div>
+	  <h3>Vendor Account Demo</h3>
+	  <p>Discover how sustainable brands manage their presence, publish updates, and track engagement.</p>
+	  <iframe src="https://youtube.com/embed/bNCpxkpJgHs?si=P4FidHJz6RLatmVl" allowfullscreen></iframe>
+	</div>
+  </section>
+  
+
+  <section id="atlsfw" class="section">
+    <h2>Atlanta Sustainable Fashion Week</h2>
+    <p>Inspired by ATL SFW, our app aligns with its mission to create a more ethical, inclusive, and sustainable fashion ecosystem in Atlanta. Visit their official website for upcoming events and involvement opportunities.</p>
+    <a class="button" href="https://www.atlsfw.com" target="_blank">Visit ATL SFW Website</a>
+  </section>
+
+  <footer>
+	<a href="https://github.com/noxYJZeng/ATLSFW_App_Enhancement" target="_blank" style="color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1rem;">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+		  <path d="M12 .297a12 12 0 00-3.79 23.399c.6.113.82-.258.82-.577v-2.014c-3.338.726-4.042-1.614-4.042-1.614-.546-1.388-1.333-1.757-1.333-1.757-1.09-.745.082-.729.082-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.833 2.807 1.304 3.492.997.108-.775.419-1.305.763-1.605-2.665-.305-5.466-1.336-5.466-5.932 0-1.31.468-2.381 1.236-3.221-.123-.304-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 016.003 0c2.29-1.553 3.296-1.23 3.296-1.23.655 1.653.242 2.872.119 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.805 5.625-5.476 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.217.694.825.576A12.004 12.004 0 0012 .297z"/>
+		</svg>
+		<span style="font-size: 1rem;">View on GitHub</span>
+	  </a>
+	  
+    <p>&copy; 2025 ATLSFW App - Designed & Developed by team4347 Georgia Tech</p>
+</footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
